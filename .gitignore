@@ -1,0 +1,6 @@
+# Removing images from git project
+*.jpg
+logos/*.svg
+logos/*.svg
+icons/*.png
+icons/*.svg
