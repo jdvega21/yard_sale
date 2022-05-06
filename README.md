@@ -1,2 +1,2 @@
 # yard_sale
-Yard Sale front end project related to Frontend Developer at Platzi
+Yard Sale front end project related to Frontend Developer course at Platzi
