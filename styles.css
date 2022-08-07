@@ -14,9 +14,8 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 .inactive{
-    display: none;
+    display: none !important;
 }
-
 
 nav{
     display: flex;
@@ -64,8 +63,7 @@ nav{
 .navbar-right ul li a:hover{
     border: 1px solid var(--hospital-green);
 }
-/*.desktop-menu ul li a:last-child{*/
-    .desktop-menu ul li:last-child a:hover{
+.desktop-menu ul li:last-child a:hover{
         color: var(--very-light-orange);
     } 
 .navbar-email{
@@ -133,14 +131,60 @@ nav{
     display: inline-block;
     margin-bottom: 20px;
 }
+
+/* Mobile menu*/
+
+.mobile-menu{
+    position: absolute;
+    top: 60px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+.mobile-menu a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+.mobile-menu ul{
+    padding: 0;
+    margin-top: 24px 0 0 ;
+    list-style: none;
+    
+}
+.mobile-menu ul:nth-child(1){
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.mobile-menu ul li{
+    margin-bottom: 24px;
+}
+.mobile-menu ul li a:hover{
+    color: var(--hospital-green);
+}
+.email{
+    font-size: var(--sm);
+    font-weight: 300!important;
+}
+.sign-out{
+    font-size: var(--sm);
+    color: var(--hospital-green) !important; 
+}
+.sign-out:hover{
+    color: var(--very-light-orange)!important;
+}
 @media (max-width: 640px){
     .menu{
         display: block;
     }
-    .navbar-left ul{
+    .navbar-left ul,
+    .navbar-email,
+    .desktop-menu{
         display: none;
     }
-    .navbar-email{
+}
+
+@media (min-width: 641px){
+    .mobile-menu{
         display: none;
     }
 }
